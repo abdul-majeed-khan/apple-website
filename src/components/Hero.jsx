@@ -1,14 +1,14 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { /*heroVideo, smallHeroVideo,*/ toteme, smallToteme } from "../utils";
+import { /*heroVideo, smallHeroVideo,*/ toteme, smallToteme, rayImg } from "../utils";
 import { useEffect, useState } from "react";
 
 
 const Hero = () => {
- const [videoSrc, setVideoSrc] = useState(window.innerWidth < 760 ? smallToteme : toteme)
+ const [videoSrc, setVideoSrc] = useState(window.innerWidth < 1150 ? smallToteme : toteme)
 
  const handleVideoSrcSet = () => {
-  if(window.innerWidth < 760) {
+  if(window.innerWidth < 1150) {
     setVideoSrc(smallToteme)
   } else {
     setVideoSrc(toteme)
@@ -25,17 +25,18 @@ const Hero = () => {
 
   useGSAP(() => {
     gsap.to('#hero', {opacity: 1, delay: 1.5})
-    gsap.to('#cta', {opacity: 1, y: -50, delay: 2})
+    gsap.to('#cta', {opacity: 1, y: 200, delay: 2})
   }, [])
 
   return (
-    <section className="w-full nav-height bg-black relative">
+    <section className="w-full nav-height bg-black relative overflow-hidden">
+      <img src={rayImg} className="absolute w-full opacity-40"></img>
       <div className="w-full flex-center flex-col mt-10">
-        <div className="absolute h-5/6 w-full pt-20 top-0 justify-center">
-          <p id="hero" className="hero-title mb-5">Your 10X developer is here</p>
-          <p id="hero" className="hero-title">I`m MJ</p>
+        <div className="absolute h-5/6 w-full pt-20 mt-20 top-0 justify-center flex flex-col">
+          <p id="hero" className="hero-title mb-5 text-3xl md:text-5xl">YOUR 10X dEVELOPER IS HERE</p>
+          <p id="hero" className="hero-title text-3xl md:text-5xl">I`M MJ</p>
         </div>
-        <div className="w-6/12">
+        <div className="w-3/12">
           <video className="pointer-events-none" autoPlay loop muted playsInline={true} key={videoSrc}>
             <source src={videoSrc} type="video/mp4" />
           </video>
