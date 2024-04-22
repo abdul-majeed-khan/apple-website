@@ -24,6 +24,9 @@ import play from "/assets/images/play.svg";
 import pause from "/assets/images/pause.svg";
 import mj from "/assets/images/mj.png"
 import ray from "/assets/images/ray.png"
+import flash from "/assets/images/flash.png"
+import mirror from "/assets/images/mirror.png"
+import net from "/assets/images/net.png"
 
 import yellow from "/assets/images/yellow.jpg";
 import blue from "/assets/images/blue.jpg";
@@ -57,6 +60,9 @@ export const playImg = play;
 export const pauseImg = pause;
 export const mjImg = mj;
 export const rayImg = ray;
+export const flashImg = flash;
+export const mirrorImg = mirror;
+export const netImg = net;
 
 export const yellowImg = yellow;
 export const blueImg = blue;

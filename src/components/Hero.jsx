@@ -33,7 +33,7 @@ const Hero = () => {
       <img src={rayImg} className="absolute w-full opacity-40"></img>
       <div className="w-full flex-center flex-col mt-10">
         <div className="absolute h-5/6 w-full pt-20 mt-20 top-0 justify-center flex flex-col">
-          <p id="hero" className="hero-title mb-5 text-3xl md:text-5xl">YOUR 10X dEVELOPER IS HERE</p>
+          <p id="hero" className="hero-title mb-5 text-3xl md:text-5xl">YOUR 10X DEVELOPER IS HERE</p>
           <p id="hero" className="hero-title text-3xl md:text-5xl">I`M MJ</p>
         </div>
         <div className="w-3/12">
