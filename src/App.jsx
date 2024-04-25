@@ -1,12 +1,10 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Highlights from './components/Highlights';
-import Layout from './components/layout';
 
 const App = () => {
   return (
     <main className="bg-black">
-      <Layout />
       <Navbar />
       <Hero />
       <Highlights />
