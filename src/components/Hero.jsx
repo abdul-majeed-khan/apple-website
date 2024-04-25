@@ -2,6 +2,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { /*heroVideo, smallHeroVideo,*/ toteme, smallToteme, rayImg } from "../utils";
 import { useEffect, useState } from "react";
+import GLTFComponent from "./totem";
 
 
 const Hero = () => {
@@ -35,6 +36,9 @@ const Hero = () => {
         <div className="absolute h-5/6 w-full pt-20 mt-20 top-0 justify-center flex flex-col">
           <p id="hero" className="hero-title mb-5 text-3xl md:text-5xl">YOUR 10X DEVELOPER IS HERE</p>
           <p id="hero" className="hero-title text-3xl md:text-5xl">I`M MJ</p>
+        </div>
+        <div className="hero-model">
+          <GLTFComponent />
         </div>
         <div className="w-3/12">
           <video className="pointer-events-none" autoPlay loop muted playsInline={true} key={videoSrc}>
